@@ -1,3 +1,4 @@
+// edited slightly from the google-translate-api github codebase
 const langs = {
   'auto': 'Automatic',
   'af': 'Afrikaans',

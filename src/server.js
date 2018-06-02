@@ -49,6 +49,8 @@ const handleMessage = (bot, message, newLangLength) => {
       console.error(err);
     });
   } else {
+    // removes first word if it's @paulbot or any other calling term
+    if (newLangLength === 3) message.text = message.text.substr(message.text.indexOf(' ') + 1);
     translate(message.text, { from: 'en', to: language }).then((res) => {
       bot.reply(message, res.text);
     }).catch((err) => {
@@ -61,14 +63,9 @@ controller.on('direct_message', (bot, message) => {
   handleMessage(bot, message, 2);
 });
 
-// don't yet work
-// controller.on('direct_mention', (bot, message) => {
-//   handleMessage(bot, message, 3);
-// });
-//
-// controller.on('ambient', (bot, message) => {
-//   if (message.text.split(' ')[0].includes('bot')) handleMessage(bot, message, 3);
-// });
+controller.hears(['paulbot', 'paulbot,', 'Paulbot,', 'Paulbot,', 'PaulBot', 'PaulBot,'], ['ambient'], (bot, message) => {
+  handleMessage(bot, message, 3);
+});
 
 // initialize
 const app = express();
