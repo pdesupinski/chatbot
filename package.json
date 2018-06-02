@@ -1,8 +1,8 @@
 {
-  "name": "example_express_with_es6",
-  "version": "2.0.0",
-  "description": "",
-  "author": "",
+  "name": "paul-google-translate-bot",
+  "version": "1.0.0",
+  "description": "Chatbot which translates Slack messages into different languages",
+  "author": "Paul de Supinski",
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

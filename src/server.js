@@ -67,6 +67,10 @@ controller.hears(['paulbot', 'paulbot,', 'Paulbot,', 'Paulbot,', 'PaulBot', 'Pau
   handleMessage(bot, message, 3);
 });
 
+controller.on('outgoing_webhook', (bot, message) => {
+  bot.replyPublic(message, 'im awake');
+});
+
 // initialize
 const app = express();
 
