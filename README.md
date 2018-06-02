@@ -11,7 +11,7 @@ For example,
  4. Paulbot: mijn bagel staat in brand
  5. You: paulbot knees weak arms are heavy mom's spaghetti
  6. Paulbot: knieën zwakke armen zijn zware moeders spaghetti   
- 
+
 You can switch Paulbot's language as many times as you want, and have it translate as many messages as you want between language changes. Additionally, *paulbot autocorrects your spelling errors*!   
 
  1. You: paulbot i caan seee myy house from heere
@@ -20,4 +20,4 @@ You can switch Paulbot's language as many times as you want, and have it transla
 Unfortunately, I could not debug an odd port error with heroku, so you must run Paulbot locally.
 https://help.heroku.com/UMAUQ4UF/why-am-i-seeing-application-error
 # Screenshot
-![Paulbot example](./example.png "Example")
+![Paulbot example](./src/example.png "Example")
